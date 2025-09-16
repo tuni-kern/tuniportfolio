@@ -6,25 +6,20 @@ import Link from "next/link"
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A fully responsive e-commerce platform built with Next.js and TypeScript.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    imageUrl: "/images/projects/project-1.jpg",
-    projectUrl: "/projects/e-commerce",
+    title: "Allytic.ai",
+    description:
+      "AI-driven analytics platform delivering actionable insights and automation for business operations.",
+    tags: ["Next.js", "TypeScript", "AI", "Analytics"],
+    imageUrl: "https://www.google.com/s2/favicons?sz=64&domain_url=allytic.ai",
+    projectUrl: "https://allytic.ai",
   },
   {
-    title: "Task Management App",
-    description: "A task management application with drag-and-drop functionality.",
-    tags: ["React", "Redux", "Node.js"],
-    imageUrl: "/images/projects/project-2.jpg",
-    projectUrl: "/projects/task-management",
-  },
-  {
-    title: "Weather Dashboard",
-    description: "A weather dashboard that displays current and forecast weather data.",
-    tags: ["JavaScript", "API Integration", "CSS"],
-    imageUrl: "/images/projects/project-3.jpg",
-    projectUrl: "/projects/weather-dashboard",
+    title: "Wellness Vending Solutions",
+    description:
+      "Modern vending solutions focused on healthy products, telemetry, and cashless payments.",
+    tags: ["React", "Node.js", "Payments", "IoT"],
+    imageUrl: "/images/projects/wvs-logo.png",
+    projectUrl: "https://wellnessvendingsolutions.com",
   },
 ]
 

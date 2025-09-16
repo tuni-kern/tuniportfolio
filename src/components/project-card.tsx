@@ -1,3 +1,6 @@
+"use client"
+
+import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
@@ -19,25 +22,45 @@ export function ProjectCard({
   projectUrl,
   className,
 }: ProjectCardProps) {
+  const [imageError, setImageError] = React.useState(false)
   return (
     <Link
       href={projectUrl}
+      target={projectUrl.startsWith("http") ? "_blank" : undefined}
+      rel={projectUrl.startsWith("http") ? "noopener noreferrer" : undefined}
       className={cn(
         "group relative overflow-hidden rounded-lg border bg-card text-card-foreground shadow transition-all hover:shadow-md",
         className
       )}
     >
-      <div className="aspect-video relative overflow-hidden">
-        <Image
-          src={imageUrl}
-          alt={title}
-          fill
-          className="object-cover transition-transform group-hover:scale-105"
-        />
-      </div>
       <div className="p-4">
-        <h3 className="font-semibold text-lg">{title}</h3>
-        <p className="text-muted-foreground text-sm mt-2">{description}</p>
+        <div className="flex items-start gap-3">
+          <div className="shrink-0 rounded-md overflow-hidden border bg-muted flex items-center justify-center" style={{ width: 48, height: 48 }}>
+            {!imageError ? (
+              <Image
+                src={imageUrl}
+                alt={title}
+                width={48}
+                height={48}
+                className="object-cover"
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <span className="text-xs font-semibold text-muted-foreground">
+                {title
+                  .split(" ")
+                  .map((w) => w[0])
+                  .join("")
+                  .slice(0, 3)
+                  .toUpperCase()}
+              </span>
+            )}
+          </div>
+          <div className="min-w-0">
+            <h3 className="font-semibold text-base leading-tight line-clamp-1">{title}</h3>
+            <p className="text-muted-foreground text-sm mt-1 line-clamp-2">{description}</p>
+          </div>
+        </div>
         <div className="flex flex-wrap gap-2 mt-4">
           {tags.map((tag) => (
             <span

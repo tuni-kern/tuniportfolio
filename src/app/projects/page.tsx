@@ -4,6 +4,14 @@ import { ProjectCard } from "@/components/project-card"
 
 const projects = [
   {
+    title: "Bubblebeam",
+    description:
+      "AI-powered image generator - Full-stack SaaS application with AI integration, payments, and containerized deployment.",
+    tags: ["React", "Node.js", "Express", "Google Gemini AI", "Stripe", "Supabase", "PostgreSQL", "Docker", "Docker Compose", "Tailwind CSS", "Cloudflare", "Nginx", "Sharp"],
+    imageUrl: "https://www.google.com/s2/favicons?sz=64&domain_url=bubblebeam.app",
+    projectUrl: "https://bubblebeam.app/",
+  },
+  {
     title: "Allytic.ai",
     description:
       "AI-driven analytics platform delivering actionable insights and automation for business operations.",

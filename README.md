@@ -27,6 +27,20 @@ First, install the dependencies:
 npm install
 ```
 
+### Contact Form Setup
+
+The contact form uses Resend to send emails. To enable it:
+
+1. Sign up for a free account at [Resend](https://resend.com)
+2. Get your API key from the [Resend dashboard](https://resend.com/api-keys)
+3. Create a `.env.local` file in the root directory:
+   ```bash
+   RESEND_API_KEY=re_your_api_key_here
+   ```
+4. Replace `re_your_api_key_here` with your actual Resend API key
+
+**Note:** For production, you'll need to verify your domain with Resend to send from a custom email address. For development, Resend provides a default sender address.
+
 Then, run the development server:
 
 ```bash

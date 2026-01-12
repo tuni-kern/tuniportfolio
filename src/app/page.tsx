@@ -6,6 +6,14 @@ import Link from "next/link"
 
 const projects = [
   {
+    title: "Bubblebeam",
+    description:
+      "AI-powered image generator - Full-stack SaaS application with AI integration, payments, and containerized deployment.",
+    tags: ["React", "Node.js", "Express", "Google Gemini AI", "Stripe", "Supabase", "PostgreSQL", "Docker", "Docker Compose", "Tailwind CSS", "Cloudflare", "Nginx", "Sharp"],
+    imageUrl: "https://www.google.com/s2/favicons?sz=64&domain_url=bubblebeam.app",
+    projectUrl: "https://bubblebeam.app/",
+  },
+  {
     title: "Allytic.ai",
     description:
       "AI-driven analytics platform delivering actionable insights and automation for business operations.",
@@ -93,18 +101,25 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">Skills</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {[
-                "JavaScript",
+                "Next.js",
                 "TypeScript",
                 "React",
-                "Next.js",
+                "Tailwind CSS",
+                "JavaScript",
                 "Node.js",
                 "Express",
-                "Tailwind CSS",
+                "Docker",
+                "Docker Compose",
                 "MongoDB",
                 "PostgreSQL",
                 "GraphQL",
                 "Git",
-                "Docker",
+                "Stripe",
+                "Supabase",
+                "Cloudflare",
+                "Nginx",
+                "Sharp",
+                "Google Gemini AI",
               ].map((skill) => (
                 <div
                   key={skill}

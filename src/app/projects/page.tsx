@@ -4,6 +4,14 @@ import { ProjectCard } from "@/components/project-card"
 
 const projects = [
   {
+    title: "Beckett",
+    description:
+      "Personal AI assistant running 24/7 on a VPS: handles scheduling, voice calls, real-time code deployment, and Telegram messaging, powered by Claude Code and Vapi.",
+    tags: ["Claude Code", "TypeScript", "Vapi", "Telegram", "ElevenLabs", "Supabase", "Docker", "Caddy"],
+    imageUrl: "https://www.google.com/s2/favicons?sz=64&domain_url=beckett.allytic.ai",
+    projectUrl: "https://beckett.allytic.ai",
+  },
+  {
     title: "Bubblebeam",
     description:
       "AI-powered image generator - Full-stack SaaS application with AI integration, payments, and containerized deployment.",
